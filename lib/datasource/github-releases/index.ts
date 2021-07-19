@@ -11,7 +11,7 @@ export const registryStrategy = 'first';
 
 const cacheNamespace = 'datasource-github-releases';
 
-const http = new GithubHttp();
+const http = new GithubHttp({ hostType: id });
 
 function getCacheKey(depHost: string, repo: string): string {
   const type = 'tags';
